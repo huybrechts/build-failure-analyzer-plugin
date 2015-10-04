@@ -42,6 +42,7 @@ import hudson.Util;
 import hudson.model.Action;
 import hudson.model.Failure;
 import hudson.model.Hudson;
+import hudson.model.ManagementLink;
 import hudson.model.ModelObject;
 import hudson.security.Permission;
 import hudson.util.Graph;
@@ -319,7 +320,7 @@ public class CauseManagement extends BfaGraphAction {
      * @return the instance.
      */
     public static CauseManagement getInstance() {
-        for (Action action : Hudson.getInstance().getActions()) {
+        for (Action action : Hudson.getInstance().getManagementLinks()) {
             if (action instanceof CauseManagement) {
                 return (CauseManagement)action;
             }

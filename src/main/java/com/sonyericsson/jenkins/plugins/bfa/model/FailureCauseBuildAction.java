@@ -73,11 +73,7 @@ public class FailureCauseBuildAction implements BuildBadgeAction {
 
     @Override
     public String getIconFileName() {
-        if (Hudson.getInstance().hasPermission(PluginImpl.UPDATE_PERMISSION)) {
-            return PluginImpl.getDefaultIcon();
-        } else {
-            return null;
-        }
+        return null;
     }
 
     @Override

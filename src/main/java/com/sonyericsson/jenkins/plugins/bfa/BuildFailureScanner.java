@@ -106,7 +106,7 @@ public class BuildFailureScanner extends RunListener<AbstractBuild> {
             if (build.getActions(FailureCauseBuildAction.class).isEmpty()
                 && build.getActions(FailureCauseMatrixBuildAction.class).isEmpty()) {
 
-                if (build.getResult().isWorseThan(Result.SUCCESS)) {
+                if (build.getResult().isWorseThan(Result.UNSTABLE)) {
                     scan(build, buildLog);
                     ProjectGraphAction.invalidateProjectGraphCache(build.getProject());
                     ComputerGraphAction.invalidateNodeGraphCache(build.getBuiltOn());

@@ -35,7 +35,7 @@ import java.util.Collections;
 /**
  * @author Robert Sandell &lt;robert.sandell@sonyericsson.com&gt;
  */
-@Extension
+//@Extension
 public class TransientActionProvider extends TransientProjectActionFactory {
 
 
